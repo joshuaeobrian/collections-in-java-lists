@@ -1,5 +1,7 @@
 package com.theironyard;
 
+import java.util.ArrayList;
+
 /**
  * This exercise is another collection of katas. Follow the instructions below
  * to create the specified methods.
@@ -22,6 +24,15 @@ public class ListKatas {
      * @return An ArrayList of Integers, starting at 0 and continuing to n-1
      */
     // todo: create arrayListIndexes() method
+	public static ArrayList<Integer> arrayListIndexes(int n){
+		ArrayList<Integer> integers = new ArrayList<>();
+
+		 for(int index=0; index < n; index++){
+			integers.add(index);
+			}
+
+		return integers;
+	}
 
     /**
      * Write a static method named sumList() that accepts an ArrayList of
@@ -33,6 +44,16 @@ public class ListKatas {
      * @return the sum of the provided List of Doubles
      */
     // todo: create sumList() method
+	public static double sumList(ArrayList<Double> numbers){
+		// declaring a double with the value of 0
+		double sum = 0;
+		//for looping through the ArrayList
+		for(int index = 0; index < numbers.size(); index++){
+
+			sum += numbers.get(index);
+		}
+		return sum;
+	}
 
     /**
      * Create a static method named concatenateStrings() that accepts an
@@ -44,6 +65,14 @@ public class ListKatas {
      * @return a concatenation of the provided ArrayList of strings.
      */
     // todo: create concatenateStrings() method
+	public static String concatenateStrings(ArrayList<String> strings){
+		String str = "";
+
+		for(int index = 0; index < strings.size(); index++){
+			str += strings.get(index);
+		}
+		return str;
+	}
 
     /**
      * Create a static method named reverseListOfStrings() that accepts an
@@ -68,5 +97,12 @@ public class ListKatas {
      * @return an ArrayList of Strings in reverse order
      */
     // todo: create reverseListOfStrings() method
+	public static ArrayList<String>reverseListOfStrings(ArrayList<String> strings){
+		ArrayList<String> reverse = new ArrayList<>();
+		for(int index = strings.size()-1; 0 <= index; index--){
+			reverse.add(strings.get(index));
+		}
+		return reverse;
+	}
 
 }
