@@ -25,12 +25,14 @@ public class ListKatas {
      */
     // todo: create arrayListIndexes() method
 	public static ArrayList<Integer> arrayListIndexes(int n){
+		//Makes a new ArrayList for Integers
 		ArrayList<Integer> integers = new ArrayList<>();
-
+		//Loops in for loop adding numbers to the array
 		 for(int index=0; index < n; index++){
+		 	//add the current index number to the integer arraylist
 			integers.add(index);
 			}
-
+		//returns the ArrayList
 		return integers;
 	}
 
@@ -49,7 +51,8 @@ public class ListKatas {
 		double sum = 0;
 		//for looping through the ArrayList
 		for(int index = 0; index < numbers.size(); index++){
-
+			//sums up the numbers in the ArrayList one but one
+			//pulls the number bt the index of the array
 			sum += numbers.get(index);
 		}
 		return sum;
@@ -66,11 +69,15 @@ public class ListKatas {
      */
     // todo: create concatenateStrings() method
 	public static String concatenateStrings(ArrayList<String> strings){
+		//creating a empty string
 		String str = "";
-
+		//loops through the array list by index numbers
 		for(int index = 0; index < strings.size(); index++){
+			// adds the string from the Array list at the current position
+			// and adds it to the current String str
 			str += strings.get(index);
 		}
+		// returns the value of str which is the concat of Array list strings
 		return str;
 	}
 
@@ -98,10 +105,14 @@ public class ListKatas {
      */
     // todo: create reverseListOfStrings() method
 	public static ArrayList<String>reverseListOfStrings(ArrayList<String> strings){
+		// creates new ArrayList for Strings
 		ArrayList<String> reverse = new ArrayList<>();
+		// Loops through the array by the index. (backwards)
 		for(int index = strings.size()-1; 0 <= index; index--){
+			// sets index value into reverse array highest to lowest
 			reverse.add(strings.get(index));
 		}
+		// return reverse array
 		return reverse;
 	}
 
